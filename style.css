@@ -28,39 +28,68 @@ body {
 }
 
 .slot-1-running {
-  animation-name: firstSlotRotating;
-  animation-timing-function: linear;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
+  animation: slotRotating 1s linear infinite running;
+}
+
+.slot-1-stopping-1 {
+  animation: slotStoppingPositionOne 1s ease-out forwards;
+}
+
+.slot-1-stopping-2 {
+  animation: slotStoppingPositionTwo 1s ease-out forwards;
+}
+
+.slot-1-stopping-3 {
+  animation: slotStoppingPositionThree 1s ease-out forwards;
 }
 
 .slot-2-running {
-  animation-name: secondSlotRotating;
-  animation-timing-function: linear;
-  animation-duration: 1.2s;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
+  animation: slotRotating 1.2s linear infinite running;
 }
+
+.slot-2-stopping-1 {
+  animation: slotStoppingPositionOne 1s ease-out forwards;
+}
+
+.slot-2-stopping-2 {
+  animation: slotStoppingPositionTwo 1s ease-out forwards;
+}
+
+.slot-2-stopping-3 {
+  animation: slotStoppingPositionThree 1s ease-out forwards;
+}
+
 .slot-3-running {
-  animation-name: thirdSlotRotating;
-  animation-timing-function: linear;
-  animation-duration: .9s;
-  animation-iteration-count: infinite;
-  animation-play-state: running;
+  animation: slotRotating 0.9s linear infinite running;
 }
 
-@keyframes firstSlotRotating {
-  0% { background-position: 0 0; }
+.slot-3-stopping-1 {
+  animation: slotStoppingPositionOne 1s ease-out forwards;
+}
+
+.slot-3-stopping-2 {
+  animation: slotStoppingPositionTwo 1s ease-out forwards;
+}
+
+.slot-3-stopping-3 {
+  animation: slotStoppingPositionThree 1s ease-out forwards;
+}
+
+@keyframes slotRotating {
   100% { background-position: 0 -1000px; }
 }
 
-@keyframes secondSlotRotating {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 -1000px; }
+@keyframes slotStoppingPositionOne {
+  100% { background-position: 0 -400px; }
 }
 
-@keyframes thirdSlotRotating {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 -1000px; }
+@keyframes slotStoppingPositionTwo {
+  100% { background-position: 0 -120px; }
 }
+
+@keyframes slotStoppingPositionThree {
+  100% { background-position: 0 -250px; }
+}
+
+
+
