@@ -2,13 +2,11 @@ body {
   background: url("images/coffee-maker-background.jpg");
   background-size: cover; 
   background-repeat: no-repeat;
-  background-position: center center;   
+  background-position: center center;
+  height: 100vh;
 }
 
 @media screen and (min-width: 680px) {
-  body {
-    height: 100vh;
-  }
 
   .slots-container {
     background: white;
@@ -20,53 +18,123 @@ body {
   }
 
   .slots-wrapper {
-  height: 200px;
+    height: 200px;
   }
 
   .slot {
-  width: 120px;
-  height: 150px;
-  margin: 25px 20px;
-  float: left;
+    width: 120px;
+    height: 150px;
+    margin: 25px 20px;
+    float: left;
   }
+
+  #slot-one {
+  background: url("images/slot-1.png");
+  }
+
+  #slot-two {
+    background: url("images/slot-2.png");
+  }
+
+  #slot-three {
+    background: url("images/slot-3.png");
+  }
+
+  @keyframes slotRotating {
+  100% { background-position: 0 -1000px; }
+  }
+
+  @keyframes slotStoppingPositionOne {
+    100% { background-position: 0 -400px; }
+  }
+
+  @keyframes slotStoppingPositionTwo {
+    100% { background-position: 0 -122px; }
+  }
+
+  @keyframes slotStoppingPositionThree {
+    100% { background-position: 0 -252px; }
+  }
+
+  .button-get-caffeine {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px 11px;
+    font-size: 18px;
+    background-color: #57d6c7;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #57D6C7; 
+  }
+
 }
 
-@media screen and (max-width: 680px) {
-  body {
-    height: 100%;
-  }
-  
+@media screen and (max-width: 680px) {  
+
   .slots-container {
     background: white;
-    height: 590px;
-    width: 200px;
-    margin: 100px auto 100px auto;
+    height: 190px;
+    width: 300px;
+    margin: 100px auto;
     border-radius: 10px;
   }
 
   .slots-wrapper {
-  height: 530px;
-  margin-top: 20px;
-  position: relative;
+    height: 140px;
   }
 
   .slot {
-  width: 120px;
-  height: 150px;
-  margin: 25px auto;
+    width: 60px;
+    height: 60px;
+    margin: 50px 20px 20px 20px;
+    float: left;
   }
-}
 
-#slot-one {
-  background: url("images/slot-1.jpg");
-}
+  #slot-one {
+    background: url("images/slot-1-small.jpg");
+  }
 
-#slot-two {
-  background: url("images/slot-2.jpg");
-}
+  #slot-two {
+    background: url("images/slot-2-small.jpg");
+  }
 
-#slot-three {
-  background: url("images/slot-3.jpg");
+  #slot-three {
+    background: url("images/slot-3-small.jpg");
+  }
+
+  @keyframes slotRotating {
+    100% { background-position: 0 -540px; }
+  }
+
+  @keyframes slotStoppingPositionOne {
+    100% { background-position: 0 -400px; }
+  }
+
+  @keyframes slotStoppingPositionTwo {
+    100% { background-position: 0 -68px; }
+  }
+
+  @keyframes slotStoppingPositionThree {
+    100% { background-position: 0 -130px; }
+  }
+ 
+ .button-get-caffeine {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 12px 9px;
+    font-size: 12px;
+    background-color: #57d6c7;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #57D6C7; 
+  }
+
 }
 
 .slot-one-running {
@@ -117,27 +185,13 @@ body {
   animation: slotStoppingPositionThree 1s ease-out forwards;
 }
 
-@keyframes slotRotating {
-  100% { background-position: 0 -1000px; }
-}
-
-@keyframes slotStoppingPositionOne {
-  100% { background-position: 0 -400px; }
-}
-
-@keyframes slotStoppingPositionTwo {
-  100% { background-position: 0 -120px; }
-}
-
-@keyframes slotStoppingPositionThree {
-  100% { background-position: 0 -250px; }
-}
-
 .no-caffeine {
   background: lightcoral;
   color: white;
   text-align: center;
   border-radius: 10px;
+  padding: 5px 5px;
+  transition: height 15s;
 }
 
 .caffeine {
@@ -145,22 +199,19 @@ body {
   color: green;
   text-align: center;
   border-radius: 10px;
+  padding: 5px 5px;
 }
 
 .hidden { 
-  display: none; 
+  display: none;
 }
 
-.button-get-caffeine {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 15px 11px;
-  font-size: 18px;
-  background-color: #57d6c7;
-  font-weight: bold;
-  color: #ffffff;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border: 1px solid #57D6C7;
+.slots-wrapper-border-win {
+  border: 2px solid lightgreen;
 }
+
+.slots-wrapper-border-loose {
+  border: 2px solid lightcoral;
+}
+
+

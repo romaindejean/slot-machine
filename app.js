@@ -17,6 +17,7 @@ $(document).ready(function() {
 
   function findFinalPosition(slotNumber) {
     let finalSlotPosition = Math.ceil(Math.random()*3);
+    console.log(slotNumber, finalSlotPosition);
     $('#' + slotNumber).removeClass(slotNumber + '-running').addClass(slotNumber + '-stopping-' + finalSlotPosition);
     return finalSlotPosition;
   }
