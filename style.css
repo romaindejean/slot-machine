@@ -3,15 +3,18 @@ body {
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center center;   
-  height: 100vh;
 }
 
 @media screen and (min-width: 680px) {
+  body {
+    height: 100vh;
+  }
+
   .slots-container {
     background: white;
     height: 258px;
     width: 480px;
-    margin: 200px 100px 0 0;
+    margin: 200px 100px 100px 0;
     float: right;
     border-radius: 10px;
   }
@@ -29,11 +32,15 @@ body {
 }
 
 @media screen and (max-width: 680px) {
+  body {
+    height: 100%;
+  }
+  
   .slots-container {
     background: white;
     height: 590px;
     width: 200px;
-    margin: 100px auto 0 auto;
+    margin: 100px auto 100px auto;
     border-radius: 10px;
   }
 
@@ -125,7 +132,6 @@ body {
 @keyframes slotStoppingPositionThree {
   100% { background-position: 0 -250px; }
 }
-
 
 .no-caffeine {
   background: lightcoral;
