@@ -14,8 +14,9 @@ $(document).ready(() => {
     finalPositionReelOne = '';
     finalPositionReelTwo = '';
     finalPositionReelThree = '';
-    // Hidding result message
+    // Re-initializing the result message's classes
     resultMessage.addClass('hidden');
+    resultMessage.removeClass('caffeine no-caffeine');
     // Removing stopping class for each reel
     $('#reel-one').removeClass('reel-one-stopping-1 reel-one-stopping-2 reel-one-stopping-3');
     $('#reel-two').removeClass('reel-two-stopping-1 reel-two-stopping-2 reel-two-stopping-3');
