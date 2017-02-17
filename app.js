@@ -33,20 +33,34 @@ $(document).ready(function() {
     }
   }
 
-  $('#get-caffeine').on('click', function() {
-    if (!$('#slot-one').hasClass('slot-one-running')) {
+  // $('#get-caffeine').on('click', function() {
+  //   if (!$('#slot-one').hasClass('slot-one-running')) {
+  //     reInitializeState();
+  //     $('#slot-one').addClass('slot-one-running');
+  //     $('#slot-two').addClass('slot-two-running');
+  //     $('#slot-three').addClass('slot-three-running');
+  //     $('#get-caffeine').html('Stop spinning');
+  //   } else {
+  //     finalPositionOne = findFinalPosition('slot-one');
+  //     finalPositionTwo = findFinalPosition('slot-two');
+  //     finalPositionThree = findFinalPosition('slot-three');
+  //     verifyWin(finalPositionOne, finalPositionTwo, finalPositionThree);
+  //     $('#get-caffeine').html('Get Caffeine');
+  //   }
+  // });
+
+    $('#get-caffeine').on('click', function() {
       reInitializeState();
       $('#slot-one').addClass('slot-one-running');
       $('#slot-two').addClass('slot-two-running');
       $('#slot-three').addClass('slot-three-running');
-      $('#get-caffeine').html('Stop spinning');
-    } else {
-      finalPositionOne = findFinalPosition('slot-one');
-      finalPositionTwo = findFinalPosition('slot-two');
-      finalPositionThree = findFinalPosition('slot-three');
-      verifyWin(finalPositionOne, finalPositionTwo, finalPositionThree);
-      $('#get-caffeine').html('Get Caffeine');
-    }
+      setTimeout(function() {
+        finalPositionOne = findFinalPosition('slot-one');
+        finalPositionTwo = findFinalPosition('slot-two');
+        finalPositionThree = findFinalPosition('slot-three');
+        verifyWin(finalPositionOne, finalPositionTwo, finalPositionThree);
+      }, 1500);
+      
   });
 
 });
