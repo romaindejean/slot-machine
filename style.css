@@ -122,4 +122,13 @@ body {
 .button-get-caffeine {
   display: block;
   margin: 0 auto;
+  padding: 10px 15px 11px;
+  font-size: 18px;
+  background-color: #57d6c7;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #57D6C7;
 }

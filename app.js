@@ -5,6 +5,18 @@ $(document).ready(function() {
   let finalPositionThree = '';
   let hasWon = '';
 
+  function reInitializeState() {
+    hasWon = '';
+    finalPositionOne = '';
+    finalPositionTwo = '';
+    finalPositionThree = '';
+    $('.no-caffeine').addClass('hidden');
+    $('.caffeine').addClass('hidden');
+    $('#slot-one').removeClass('slot-one-stopping-1 slot-one-stopping-2 slot-one-stopping-3');
+    $('#slot-two').removeClass('slot-two-stopping-1 slot-two-stopping-2 slot-two-stopping-3');
+    $('#slot-three').removeClass('slot-three-stopping-1 slot-three-stopping-2 slot-three-stopping-3');
+  }
+
   function findFinalPosition(slotNumber) {
     let finalSlotPosition = Math.ceil(Math.random()*3);
     $('#' + slotNumber).removeClass(slotNumber + '-running').addClass(slotNumber + '-stopping-' + finalSlotPosition);
@@ -23,12 +35,10 @@ $(document).ready(function() {
 
   $('#get-caffeine').on('click', function() {
     if (!$('#slot-one').hasClass('slot-one-running')) {
-      hasWon = '';
-      $('.no-caffeine').addClass('hidden');
-      $('.caffeine').addClass('hidden');
-      $('#slot-one').removeClass('slot-one-stopping-1 slot-one-stopping-2 slot-one-stopping-3').addClass('slot-one-running');
-      $('#slot-two').removeClass('slot-two-stopping-1 slot-two-stopping-2 slot-two-stopping-3').addClass('slot-two-running');
-      $('#slot-three').removeClass('slot-three-stopping-1 slot-three-stopping-2 slot-three-stopping-3').addClass('slot-three-running');
+      reInitializeState();
+      $('#slot-one').addClass('slot-one-running');
+      $('#slot-two').addClass('slot-two-running');
+      $('#slot-three').addClass('slot-three-running');
     } else {
       finalPositionOne = findFinalPosition('slot-one');
       finalPositionTwo = findFinalPosition('slot-two');
