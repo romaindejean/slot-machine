@@ -6,17 +6,28 @@ body {
   height: 100vh;
 }
 
+.slots-container {
+  background: white;
+  height: 258px;
+  width: 480px;
+  margin: 200px 100px 0 0;
+  float: right;
+}
+
+.slots-wrapper {
+  height: 200px;
+}
+
 .slot {
+  background: #F44336; 
   width: 120px;
   height: 150px;
-  border: 1px solid red;
+  margin: 25px 20px 25px 20px;
   float: left;
-  margin: 200px 10px 0 0;
 }
 
 #slot-one {
   background: url("images/slot-1.jpg");
-  margin-left: 900px;
 }
 
 #slot-two {
@@ -92,4 +103,23 @@ body {
 }
 
 
+.no-caffeine {
+  background: lightcoral;
+  color: red;
+  text-align: center;
+}
 
+.caffeine {
+  background: lightgreen;
+  color: green;
+  text-align: center;
+}
+
+.hidden { 
+  display: none; 
+}
+
+.button-get-caffeine {
+  display: block;
+  margin: 0 auto;
+}

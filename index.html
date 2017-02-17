@@ -7,12 +7,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
-      <div class="slots-container">
+    <div class="slots-container">
+      <div class="slots-wrapper">
           <div class="slot" id="slot-one"></div>
           <div class="slot" id="slot-two"></div>
           <div class="slot" id="slot-three"></div>
       </div>
-      <button id="get-caffeine">Get Caffeine</button>
-      <script src="./app.js"></script>
+      <div>
+        <button class="button-get-caffeine"id="get-caffeine">Get Caffeine</button>
+        <h3 class="no-caffeine hidden">Sorry no caffeine for you today!</h3>
+        <h3 class="caffeine hidden">Yay caffeine!</h3>
+      </div>
+    </div>
+    <script src="./app.js"></script>
   </body>
 </html>
