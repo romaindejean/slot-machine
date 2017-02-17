@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(() => {
   
   let finalPositionOne = '';
   let finalPositionTwo = '';
   let finalPositionThree = '';
 
-  function reInitializeState() {
+  const reInitializeState = () => {
     finalPositionOne = '';
     finalPositionTwo = '';
     finalPositionThree = '';
@@ -13,29 +13,42 @@ $(document).ready(function() {
     $('#slot-one').removeClass('slot-one-stopping-1 slot-one-stopping-2 slot-one-stopping-3');
     $('#slot-two').removeClass('slot-two-stopping-1 slot-two-stopping-2 slot-two-stopping-3');
     $('#slot-three').removeClass('slot-three-stopping-1 slot-three-stopping-2 slot-three-stopping-3');
+    $('.slots-wrapper').removeClass('slots-wrapper-border-win slots-wrapper-border-loose');
   }
 
-  function findFinalPosition(slotNumber) {
+  const findFinalPosition = slotNumber => {
     let finalSlotPosition = Math.ceil(Math.random()*3);
-    console.log(slotNumber, finalSlotPosition);
     $('#' + slotNumber).removeClass(slotNumber + '-running').addClass(slotNumber + '-stopping-' + finalSlotPosition);
     return finalSlotPosition;
   }
 
-  function verifyWin(positionOne, positionTwo, positionThree) {
+  const selectBeverage = position => {
+    if (position === 1) {
+      $('.caffeine').html('Yay caffeine! Enjoy your coffee...')
+    } else if (position === 2) {
+      $('.caffeine').html('Yay caffeine! Enjoy your tea...')
+    } else {
+      $('.caffeine').html('Yay caffeine! Enjoy your expresso...')
+    }
+  }
+
+  const verifyWin = (positionOne, positionTwo, positionThree) => {
     if (positionOne === positionTwo && positionOne === positionThree) {
+      selectBeverage(positionOne);
       setTimeout(function() {
         $('.caffeine').removeClass('hidden');
+        $('.slots-wrapper').addClass('slots-wrapper-border-win');
       }, 1000)
     } else {
       setTimeout(function() {
         $('.no-caffeine').removeClass('hidden');
+        $('.slots-wrapper').addClass('slots-wrapper-border-loose');
       }, 1000)
     }
   }
 
 // this solution provide a manual stop of the spinning
-  // $('#get-caffeine').on('click', function() {
+  // $('#get-caffeine').on('click', () => {
   //   if (!$('#slot-one').hasClass('slot-one-running')) {
   //     reInitializeState();
   //     $('#slot-one').addClass('slot-one-running');
@@ -54,15 +67,20 @@ $(document).ready(function() {
 // this solution provide an automatic stop of the spinning
     $('#get-caffeine').on('click', function() {
       reInitializeState();
+      $(this).prop("disabled", true);
       $('#slot-one').addClass('slot-one-running');
       $('#slot-two').addClass('slot-two-running');
       $('#slot-three').addClass('slot-three-running');
-      setTimeout(function() {
+      setTimeout(() => {
         finalPositionOne = findFinalPosition('slot-one');
         finalPositionTwo = findFinalPosition('slot-two');
         finalPositionThree = findFinalPosition('slot-three');
         verifyWin(finalPositionOne, finalPositionTwo, finalPositionThree);
       }, 1500);
+      //1,5sec for the running time + 1sec for the slow down animation time
+      setTimeout(() => {
+        $(this).prop("disabled", false);
+      }, 2500);
       
   });
 

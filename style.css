@@ -18,13 +18,14 @@ body {
   }
 
   .slots-wrapper {
-    height: 200px;
+    height: 155px;
+    margin: 25px 57px 15px 57px;
+    border: 3px solid transparent;
   }
 
   .slot {
     width: 120px;
     height: 150px;
-    margin: 25px 20px;
     float: left;
   }
 
@@ -76,20 +77,22 @@ body {
 
   .slots-container {
     background: white;
-    height: 190px;
+    height: 170px;
     width: 300px;
-    margin: 100px auto;
+    margin: 100px 40px;
+    float: right;
     border-radius: 10px;
   }
 
   .slots-wrapper {
-    height: 140px;
+    height: 65px;
+    margin: 40px 57px 10px 57px;
+    border: 3px solid transparent;
   }
 
   .slot {
     width: 60px;
     height: 60px;
-    margin: 50px 20px 20px 20px;
     float: left;
   }
 
@@ -207,11 +210,27 @@ body {
 }
 
 .slots-wrapper-border-win {
-  border: 2px solid lightgreen;
+  border: 3px solid lightgreen;
+  animation: pulseBorder 0.3s ease-in-out;
 }
 
 .slots-wrapper-border-loose {
-  border: 2px solid lightcoral;
+  border: 3px solid lightcoral;
+  animation: shakeBorder 0.3s ease-in-out;
 }
 
+@keyframes shakeBorder {
+  0% {transform: translateX(0);}
+  20% {transform: translateX(-5px);}
+  40% {transform: translateX(5px);}
+  60% {transform: translateX(-5px);}
+  80% {transform: translateX(5px);}
+  100% {transform: translateX(0);}
+}
+
+@keyframes pulseBorder {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.07);}
+  100% {transform: scale(1);}
+}
 
