@@ -14,64 +14,64 @@ body {
   margin: 200px 10px 0 0;
 }
 
-#slot-1 {
+#slot-one {
   background: url("images/slot-1.jpg");
   margin-left: 900px;
 }
 
-#slot-2 {
+#slot-two {
   background: url("images/slot-2.jpg");
 }
 
-#slot-3 {
+#slot-three {
   background: url("images/slot-3.jpg");
 }
 
-.slot-1-running {
+.slot-one-running {
   animation: slotRotating 1s linear infinite running;
 }
 
-.slot-1-stopping-1 {
+.slot-one-stopping-1 {
   animation: slotStoppingPositionOne 1s ease-out forwards;
 }
 
-.slot-1-stopping-2 {
+.slot-one-stopping-2 {
   animation: slotStoppingPositionTwo 1s ease-out forwards;
 }
 
-.slot-1-stopping-3 {
+.slot-one-stopping-3 {
   animation: slotStoppingPositionThree 1s ease-out forwards;
 }
 
-.slot-2-running {
+.slot-two-running {
   animation: slotRotating 1.2s linear infinite running;
 }
 
-.slot-2-stopping-1 {
+.slot-two-stopping-1 {
   animation: slotStoppingPositionOne 1s ease-out forwards;
 }
 
-.slot-2-stopping-2 {
+.slot-two-stopping-2 {
   animation: slotStoppingPositionTwo 1s ease-out forwards;
 }
 
-.slot-2-stopping-3 {
+.slot-two-stopping-3 {
   animation: slotStoppingPositionThree 1s ease-out forwards;
 }
 
-.slot-3-running {
+.slot-three-running {
   animation: slotRotating 0.9s linear infinite running;
 }
 
-.slot-3-stopping-1 {
+.slot-three-stopping-1 {
   animation: slotStoppingPositionOne 1s ease-out forwards;
 }
 
-.slot-3-stopping-2 {
+.slot-three-stopping-2 {
   animation: slotStoppingPositionTwo 1s ease-out forwards;
 }
 
-.slot-3-stopping-3 {
+.slot-three-stopping-3 {
   animation: slotStoppingPositionThree 1s ease-out forwards;
 }
 
