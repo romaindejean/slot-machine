@@ -33,6 +33,7 @@ $(document).ready(function() {
     }
   }
 
+// this solution provide a manual stop of the spinning
   // $('#get-caffeine').on('click', function() {
   //   if (!$('#slot-one').hasClass('slot-one-running')) {
   //     reInitializeState();
@@ -49,6 +50,7 @@ $(document).ready(function() {
   //   }
   // });
 
+// this solution provide an automatic stop of the spinning
     $('#get-caffeine').on('click', function() {
       reInitializeState();
       $('#slot-one').addClass('slot-one-running');
