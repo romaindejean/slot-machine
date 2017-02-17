@@ -6,24 +6,46 @@ body {
   height: 100vh;
 }
 
-.slots-container {
-  background: white;
-  height: 258px;
-  width: 480px;
-  margin: 200px 100px 0 0;
-  float: right;
-}
+@media screen and (min-width: 680px) {
+  .slots-container {
+    background: white;
+    height: 258px;
+    width: 480px;
+    margin: 200px 100px 0 0;
+    float: right;
+  }
 
-.slots-wrapper {
+  .slots-wrapper {
   height: 200px;
-}
+  }
 
-.slot {
-  background: #F44336; 
+  .slot {
   width: 120px;
   height: 150px;
-  margin: 25px 20px 25px 20px;
+  margin: 25px 20px;
   float: left;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .slots-container {
+    background: white;
+    height: 590px;
+    width: 200px;
+    margin: 200px auto 0 auto;
+  }
+
+  .slots-wrapper {
+  height: 530px;
+  margin-top: 20px;
+  position: relative;
+  }
+
+  .slot {
+  width: 120px;
+  height: 150px;
+  margin: 25px auto;
+  }
 }
 
 #slot-one {

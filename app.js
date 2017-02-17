@@ -3,10 +3,8 @@ $(document).ready(function() {
   let finalPositionOne = '';
   let finalPositionTwo = '';
   let finalPositionThree = '';
-  let hasWon = '';
 
   function reInitializeState() {
-    hasWon = '';
     finalPositionOne = '';
     finalPositionTwo = '';
     finalPositionThree = '';
@@ -25,11 +23,13 @@ $(document).ready(function() {
 
   function verifyWin(positionOne, positionTwo, positionThree) {
     if (positionOne === positionTwo && positionOne === positionThree) {
-      hasWon = true;
-      $('.caffeine').removeClass('hidden');
+      setTimeout(function() {
+        $('.caffeine').removeClass('hidden');
+      }, 1000)
     } else {
-      hasWon = false;
-      $('.no-caffeine').removeClass('hidden');
+      setTimeout(function() {
+        $('.no-caffeine').removeClass('hidden');
+      }, 1000)
     }
   }
 
