@@ -40,13 +40,13 @@ $(document).ready(() => {
     if (positionOne === positionTwo && positionOne === positionThree) {
       assignBeverage(positionOne);
       //Adding a delay to synchronize with the slow down animation
-      setTimeout(function() {
+      setTimeout(() => {
         $('.caffeine').removeClass('hidden');
         $('.slots-wrapper').addClass('slots-wrapper-border-win');
       }, 1000)
     } else {
        //Adding a delay to synchronize with the slow down animation
-      setTimeout(function() {
+      setTimeout(() => {
         $('.no-caffeine').removeClass('hidden');
         $('.slots-wrapper').addClass('slots-wrapper-border-loose');
       }, 1000)
@@ -54,7 +54,7 @@ $(document).ready(() => {
   }
 
 // this solution provide an automatic stop of the spinning
-    $('#get-caffeine').on('click', function() {
+    $('#get-caffeine').on('click', () => {
       reInitializeState();
 
       //Disabling spinning button 
