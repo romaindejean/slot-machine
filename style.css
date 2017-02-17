@@ -4,6 +4,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
+  font-family: 'Raleway', sans-serif;
 }
 
 @media screen and (min-width: 680px) {
@@ -69,6 +70,7 @@ body {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border: 1px solid #57D6C7; 
+    font-family: 'Raleway', sans-serif;
   }
 
 }
@@ -136,6 +138,7 @@ body {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border: 1px solid #57D6C7; 
+    font-family: 'Raleway', sans-serif;
   }
 
 }
