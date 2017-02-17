@@ -140,7 +140,6 @@ body {
     border: 1px solid #57D6C7; 
     font-family: 'Raleway', sans-serif;
   }
-
 }
 
 .slot-one-running {
@@ -237,3 +236,7 @@ body {
   100% {transform: scale(1);}
 }
 
+.button-get-caffeine-disabled {
+  background: #acebe3;
+  border: #acebe3;
+}

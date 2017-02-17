@@ -68,6 +68,7 @@ $(document).ready(() => {
     $('#get-caffeine').on('click', function() {
       reInitializeState();
       $(this).prop("disabled", true);
+      $(this).addClass('button-get-caffeine-disabled');
       $('#slot-one').addClass('slot-one-running');
       $('#slot-two').addClass('slot-two-running');
       $('#slot-three').addClass('slot-three-running');
@@ -79,6 +80,7 @@ $(document).ready(() => {
       }, 1500);
       //1,5sec for the running time + 1sec for the slow down animation time
       setTimeout(() => {
+        $(this).removeClass('button-get-caffeine-disabled');
         $(this).prop("disabled", false);
       }, 2500);
       
