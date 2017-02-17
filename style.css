@@ -88,7 +88,7 @@ body {
 
   .slots-wrapper {
     height: 65px;
-    margin: 40px 57px 10px 57px;
+    margin: 40px 57px 15px 57px;
     border: 3px solid transparent;
   }
 
@@ -130,7 +130,7 @@ body {
     display: block;
     margin: 0 auto;
     padding: 8px 12px 9px;
-    font-size: 12px;
+    font-size: 14px;
     background-color: #57d6c7;
     font-weight: bold;
     color: #ffffff;
@@ -139,6 +139,10 @@ body {
     -webkit-border-radius: 5px;
     border: 1px solid #57D6C7; 
     font-family: 'Raleway', sans-serif;
+  }
+
+  h3 {
+    font-size: 14px;
   }
 }
 
