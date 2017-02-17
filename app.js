@@ -39,11 +39,13 @@ $(document).ready(function() {
       $('#slot-one').addClass('slot-one-running');
       $('#slot-two').addClass('slot-two-running');
       $('#slot-three').addClass('slot-three-running');
+      $('#get-caffeine').html('Stop spinning');
     } else {
       finalPositionOne = findFinalPosition('slot-one');
       finalPositionTwo = findFinalPosition('slot-two');
       finalPositionThree = findFinalPosition('slot-three');
       verifyWin(finalPositionOne, finalPositionTwo, finalPositionThree);
+      $('#get-caffeine').html('Get Caffeine');
     }
   });
 
