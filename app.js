@@ -1,28 +1,28 @@
 $(document).ready(() => {
   
-  let finalPositionOne = '';
-  let finalPositionTwo = '';
-  let finalPositionThree = '';
+  let finalPositionReelOne = '';
+  let finalPositionReelTwo = '';
+  let finalPositionReelThree = '';
 
   const reInitializeState = () => {
-    finalPositionOne = '';
-    finalPositionTwo = '';
-    finalPositionThree = '';
+    finalPositionReelOne = '';
+    finalPositionReelTwo = '';
+    finalPositionReelThree = '';
     //Hidding result message
     $('.no-caffeine').addClass('hidden');
     $('.caffeine').addClass('hidden');
     //Removing stopping class for each reel
-    $('#slot-one').removeClass('slot-one-stopping-1 slot-one-stopping-2 slot-one-stopping-3');
-    $('#slot-two').removeClass('slot-two-stopping-1 slot-two-stopping-2 slot-two-stopping-3');
-    $('#slot-three').removeClass('slot-three-stopping-1 slot-three-stopping-2 slot-three-stopping-3');
+    $('#reel-one').removeClass('reel-one-stopping-1 reel-one-stopping-2 reel-one-stopping-3');
+    $('#reel-two').removeClass('reel-two-stopping-1 reel-two-stopping-2 reel-two-stopping-3');
+    $('#reel-three').removeClass('reel-three-stopping-1 reel-three-stopping-2 reel-three-stopping-3');
     //Removing reels border style
-    $('.slots-wrapper').removeClass('slots-wrapper-border-win slots-wrapper-border-loose');
+    $('.reels-wrapper').removeClass('reels-wrapper-border-win reels-wrapper-border-loose');
   }
 
-  const assignFinalPosition = slotNumber => {
-    let finalSlotPosition = Math.ceil(Math.random()*3);
-    $('#' + slotNumber).removeClass(slotNumber + '-running').addClass(slotNumber + '-stopping-' + finalSlotPosition);
-    return finalSlotPosition;
+  const assignFinalPosition = reelNumber => {
+    let finalReelPosition = Math.ceil(Math.random()*3);
+    $('#' + reelNumber).removeClass(reelNumber + '-running').addClass(reelNumber + '-stopping-' + finalReelPosition);
+    return finalReelPosition;
   }
 
   const assignBeverage = position => {
@@ -42,13 +42,13 @@ $(document).ready(() => {
       //Adding a delay to synchronize with the slow down animation
       setTimeout(() => {
         $('.caffeine').removeClass('hidden');
-        $('.slots-wrapper').addClass('slots-wrapper-border-win');
+        $('.reels-wrapper').addClass('reels-wrapper-border-win');
       }, 1000)
     } else {
        //Adding a delay to synchronize with the slow down animation
       setTimeout(() => {
         $('.no-caffeine').removeClass('hidden');
-        $('.slots-wrapper').addClass('slots-wrapper-border-loose');
+        $('.reels-wrapper').addClass('reels-wrapper-border-loose');
       }, 1000)
     }
   }
@@ -56,28 +56,29 @@ $(document).ready(() => {
 // this solution provide an automatic stop of the spinning
     $('#get-caffeine').on('click', () => {
       reInitializeState();
+      const button = $('#get-caffeine');
 
       //Disabling spinning button 
-      $(this).prop("disabled", true);
-      $(this).addClass('button-get-caffeine-disabled');
+      $(button).prop("disabled", true);
+      $(button).addClass('button-get-caffeine-disabled');
 
       //Starting reels spinning
-      $('#slot-one').addClass('slot-one-running');
-      $('#slot-two').addClass('slot-two-running');
-      $('#slot-three').addClass('slot-three-running');
+      $('#reel-one').addClass('reel-one-running');
+      $('#reel-two').addClass('reel-two-running');
+      $('#reel-three').addClass('reel-three-running');
 
       //Stopping reels spinning after 1sec
       setTimeout(() => {
-        finalPositionOne = assignFinalPosition('slot-one');
-        finalPositionTwo = assignFinalPosition('slot-two');
-        finalPositionThree = assignFinalPosition('slot-three');
-        verifyWin(finalPositionOne, finalPositionTwo, finalPositionThree);
+        finalPositionReelOne = assignFinalPosition('reel-one');
+        finalPositionReelTwo = assignFinalPosition('reel-two');
+        finalPositionReelThree = assignFinalPosition('reel-three');
+        verifyWin(finalPositionReelOne, finalPositionReelTwo, finalPositionReelThree);
       }, 1000);
 
       //1sec for the running time + 1sec for the slow down animation time
       setTimeout(() => {
-        $(this).removeClass('button-get-caffeine-disabled');
-        $(this).prop("disabled", false);
+        $(button).removeClass('button-get-caffeine-disabled');
+        $(button).prop("disabled", false);
       }, 2000);
       
   });

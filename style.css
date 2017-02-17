@@ -9,7 +9,7 @@ body {
 
 @media screen and (min-width: 680px) {
 
-  .slots-container {
+  .reels-container {
     background: white;
     height: 258px;
     width: 480px;
@@ -18,43 +18,43 @@ body {
     border-radius: 10px;
   }
 
-  .slots-wrapper {
+  .reels-wrapper {
     height: 155px;
     margin: 25px 57px 15px 57px;
     border: 3px solid transparent;
   }
 
-  .slot {
+  .reel {
     width: 120px;
     height: 150px;
     float: left;
   }
 
-  #slot-one {
-  background: url("images/slot-1.png");
+  #reel-one {
+  background: url("images/reel-1.png");
   }
 
-  #slot-two {
-    background: url("images/slot-2.png");
+  #reel-two {
+    background: url("images/reel-2.png");
   }
 
-  #slot-three {
-    background: url("images/slot-3.png");
+  #reel-three {
+    background: url("images/reel-3.png");
   }
 
-  @keyframes slotRotating {
+  @keyframes reelRotating {
   100% { background-position: 0 -1000px; }
   }
 
-  @keyframes slotStoppingPositionOne {
+  @keyframes reelStoppingPositionOne {
     100% { background-position: 0 -400px; }
   }
 
-  @keyframes slotStoppingPositionTwo {
+  @keyframes reelStoppingPositionTwo {
     100% { background-position: 0 -122px; }
   }
 
-  @keyframes slotStoppingPositionThree {
+  @keyframes reelStoppingPositionThree {
     100% { background-position: 0 -252px; }
   }
 
@@ -77,7 +77,7 @@ body {
 
 @media screen and (max-width: 680px) {
 
-  .slots-container {
+  .reels-container {
     background: white;
     height: 170px;
     width: 300px;
@@ -86,43 +86,43 @@ body {
     border-radius: 10px;
   }
 
-  .slots-wrapper {
+  .reels-wrapper {
     height: 65px;
     margin: 40px 57px 15px 57px;
     border: 3px solid transparent;
   }
 
-  .slot {
+  .reel {
     width: 60px;
     height: 60px;
     float: left;
   }
 
-  #slot-one {
-    background: url("images/slot-1-small.jpg");
+  #reel-one {
+    background: url("images/reel-1-small.jpg");
   }
 
-  #slot-two {
-    background: url("images/slot-2-small.jpg");
+  #reel-two {
+    background: url("images/reel-2-small.jpg");
   }
 
-  #slot-three {
-    background: url("images/slot-3-small.jpg");
+  #reel-three {
+    background: url("images/reel-3-small.jpg");
   }
 
-  @keyframes slotRotating {
+  @keyframes reelRotating {
     100% { background-position: 0 -540px; }
   }
 
-  @keyframes slotStoppingPositionOne {
+  @keyframes reelStoppingPositionOne {
     100% { background-position: 0 -400px; }
   }
 
-  @keyframes slotStoppingPositionTwo {
+  @keyframes reelStoppingPositionTwo {
     100% { background-position: 0 -68px; }
   }
 
-  @keyframes slotStoppingPositionThree {
+  @keyframes reelStoppingPositionThree {
     100% { background-position: 0 -130px; }
   }
  
@@ -147,56 +147,56 @@ body {
 
 }
 
-/*Slots Animations for run time and stop*/
-.slot-one-running {
-  animation: slotRotating 1s linear infinite running;
+/* Reels Animations for run time and stop */
+.reel-one-running {
+  animation: reelRotating 1s linear infinite running;
 }
 
-.slot-one-stopping-1 {
-  animation: slotStoppingPositionOne 1s ease-out forwards;
+.reel-one-stopping-1 {
+  animation: reelStoppingPositionOne 1s ease-out forwards;
 }
 
-.slot-one-stopping-2 {
-  animation: slotStoppingPositionTwo 1s ease-out forwards;
+.reel-one-stopping-2 {
+  animation: reelStoppingPositionTwo 1s ease-out forwards;
 }
 
-.slot-one-stopping-3 {
-  animation: slotStoppingPositionThree 1s ease-out forwards;
+.reel-one-stopping-3 {
+  animation: reelStoppingPositionThree 1s ease-out forwards;
 }
 
-.slot-two-running {
-  animation: slotRotating 1.2s linear infinite running;
+.reel-two-running {
+  animation: reelRotating 1.2s linear infinite running;
 }
 
-.slot-two-stopping-1 {
-  animation: slotStoppingPositionOne 1s ease-out forwards;
+.reel-two-stopping-1 {
+  animation: reelStoppingPositionOne 1s ease-out forwards;
 }
 
-.slot-two-stopping-2 {
-  animation: slotStoppingPositionTwo 1s ease-out forwards;
+.reel-two-stopping-2 {
+  animation: reelStoppingPositionTwo 1s ease-out forwards;
 }
 
-.slot-two-stopping-3 {
-  animation: slotStoppingPositionThree 1s ease-out forwards;
+.reel-two-stopping-3 {
+  animation: reelStoppingPositionThree 1s ease-out forwards;
 }
 
-.slot-three-running {
-  animation: slotRotating 0.9s linear infinite running;
+.reel-three-running {
+  animation: reelRotating 0.9s linear infinite running;
 }
 
-.slot-three-stopping-1 {
-  animation: slotStoppingPositionOne 1s ease-out forwards;
+.reel-three-stopping-1 {
+  animation: reelStoppingPositionOne 1s ease-out forwards;
 }
 
-.slot-three-stopping-2 {
-  animation: slotStoppingPositionTwo 1s ease-out forwards;
+.reel-three-stopping-2 {
+  animation: reelStoppingPositionTwo 1s ease-out forwards;
 }
 
-.slot-three-stopping-3 {
-  animation: slotStoppingPositionThree 1s ease-out forwards;
+.reel-three-stopping-3 {
+  animation: reelStoppingPositionThree 1s ease-out forwards;
 }
 
-/*Message class for WIN or LOSS*/
+/* Message class for WIN or LOSS */
 .no-caffeine {
   background: lightcoral;
   color: white;
@@ -218,13 +218,13 @@ body {
   display: none;
 }
 
-/*Border styling for WIN and LOSS*/
-.slots-wrapper-border-win {
+/* Border styling for WIN and LOSS */
+.reels-wrapper-border-win {
   border: 3px solid lightgreen;
   animation: pulseBorder 0.3s ease-in-out;
 }
 
-.slots-wrapper-border-loose {
+.reels-wrapper-border-loose {
   border: 3px solid lightcoral;
   animation: shakeBorder 0.3s ease-in-out;
 }
@@ -244,7 +244,7 @@ body {
   100% {transform: scale(1);}
 }
 
-/*Button class while slot animation runs*/
+/* Button class while reel animation runs */
 .button-get-caffeine-disabled {
   background: #acebe3;
   border: #acebe3;
