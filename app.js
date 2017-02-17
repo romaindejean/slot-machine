@@ -77,12 +77,12 @@ $(document).ready(() => {
         finalPositionTwo = findFinalPosition('slot-two');
         finalPositionThree = findFinalPosition('slot-three');
         verifyWin(finalPositionOne, finalPositionTwo, finalPositionThree);
-      }, 1500);
-      //1,5sec for the running time + 1sec for the slow down animation time
+      }, 1000);
+      //1sec for the running time + 1sec for the slow down animation time
       setTimeout(() => {
         $(this).removeClass('button-get-caffeine-disabled');
         $(this).prop("disabled", false);
-      }, 2500);
+      }, 2000);
       
   });
 

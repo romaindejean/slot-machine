@@ -75,7 +75,7 @@ body {
 
 }
 
-@media screen and (max-width: 680px) {  
+@media screen and (max-width: 680px) {
 
   .slots-container {
     background: white;
@@ -144,8 +144,10 @@ body {
   h3 {
     font-size: 14px;
   }
+
 }
 
+/*Slots Animations for run time and stop*/
 .slot-one-running {
   animation: slotRotating 1s linear infinite running;
 }
@@ -194,6 +196,7 @@ body {
   animation: slotStoppingPositionThree 1s ease-out forwards;
 }
 
+/*Message class for WIN or LOSS*/
 .no-caffeine {
   background: lightcoral;
   color: white;
@@ -215,6 +218,7 @@ body {
   display: none;
 }
 
+/*Border styling for WIN and LOSS*/
 .slots-wrapper-border-win {
   border: 3px solid lightgreen;
   animation: pulseBorder 0.3s ease-in-out;
@@ -240,6 +244,7 @@ body {
   100% {transform: scale(1);}
 }
 
+/*Button class while slot animation runs*/
 .button-get-caffeine-disabled {
   background: #acebe3;
   border: #acebe3;
