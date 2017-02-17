@@ -3,14 +3,14 @@ $(document).ready(() => {
   let finalPositionReelOne = '';
   let finalPositionReelTwo = '';
   let finalPositionReelThree = '';
+  const resultMessage = $('.result-message');
 
   const reInitializeState = () => {
     finalPositionReelOne = '';
     finalPositionReelTwo = '';
     finalPositionReelThree = '';
     // Hidding result message
-    $('.no-caffeine').addClass('hidden');
-    $('.caffeine').addClass('hidden');
+    resultMessage.addClass('hidden')
     // Removing stopping class for each reel
     $('#reel-one').removeClass('reel-one-stopping-1 reel-one-stopping-2 reel-one-stopping-3');
     $('#reel-two').removeClass('reel-two-stopping-1 reel-two-stopping-2 reel-two-stopping-3');
@@ -26,13 +26,12 @@ $(document).ready(() => {
   }
 
   const assignBeverage = position => {
-    if (position === 1) {
-      $('.caffeine').html('Yay caffeine! Enjoy your coffee...')
-    } else if (position === 2) {
-      $('.caffeine').html('Yay caffeine! Enjoy your tea...')
-    } else {
-      $('.caffeine').html('Yay caffeine! Enjoy your expresso...')
-    }
+    const beverage = 
+    position === 1 ? 'coffee' :
+    position === 2 ? 'tea' :
+    position === 3 ? 'expresso' : null;
+    // caffeineMessage.html(`Yay caffeine! Enjoy your ${beverage}...`);
+    resultMessage.html(`Yay caffeine! Enjoy your ${beverage}...`);
   }
 
   const verifyWin = (positionOne, positionTwo, positionThree) => {
@@ -41,13 +40,16 @@ $(document).ready(() => {
       assignBeverage(positionOne);
       // Adding a delay to synchronize with the slow down animation
       setTimeout(() => {
-        $('.caffeine').removeClass('hidden');
+        resultMessage.removeClass('hidden')
+        resultMessage.addClass('caffeine')
         $('.reels-wrapper').addClass('reels-wrapper-border-win');
       }, 1000)
     } else {
        // Adding a delay to synchronize with the slow down animation
       setTimeout(() => {
-        $('.no-caffeine').removeClass('hidden');
+        resultMessage.removeClass('hidden')
+        resultMessage.addClass('no-caffeine')
+        resultMessage.html('Sorry no caffeine for you today!');
         $('.reels-wrapper').addClass('reels-wrapper-border-loose');
       }, 1000)
     }
@@ -58,8 +60,8 @@ $(document).ready(() => {
       const button = $('#get-caffeine');
 
       // Disabling spinning button 
-      $(button).prop("disabled", true);
-      $(button).addClass('button-get-caffeine-disabled');
+      button.prop("disabled", true);
+      button.addClass('button-get-caffeine-disabled');
 
       // Starting reels spinning
       $('#reel-one').addClass('reel-one-running');
@@ -76,8 +78,8 @@ $(document).ready(() => {
 
       // 1sec for the running time + 1sec for the slow down animation time
       setTimeout(() => {
-        $(button).removeClass('button-get-caffeine-disabled');
-        $(button).prop("disabled", false);
+        button.removeClass('button-get-caffeine-disabled');
+        button.prop("disabled", false);
       }, 2000);
       
   });
