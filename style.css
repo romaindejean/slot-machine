@@ -67,8 +67,6 @@ body {
     font-weight: bold;
     color: #ffffff;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     border: 1px solid #57D6C7; 
     font-family: 'Raleway', sans-serif;
   }
@@ -135,8 +133,6 @@ body {
     font-weight: bold;
     color: #ffffff;
     border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     border: 1px solid #57D6C7; 
     font-family: 'Raleway', sans-serif;
   }
